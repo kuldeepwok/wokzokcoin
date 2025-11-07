@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WokzokCoin (WKC) - Excel-Based Token System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>Wokzok<span>Coin</span> (WKC)</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-page="wallet">Wallet</a></li>
+                    <li><a href="#" class="nav-link" data-page="transactions">Transactions</a></li>
+                    <li><a href="#" class="nav-link" data-page="ledger">Excel Ledger</a></li>
+                    <li><a href="#" class="nav-link" data-page="whitepaper">Whitepaper</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <section id="home" class="page active">
+        <div class="hero">
+            <div class="container">
+                <h2>Excel-Based Token System</h2>
+                <p>WokzokCoin (WKC) is a hybrid Excel-based digital asset system designed to emulate blockchain-like immutability, transparency, and traceability without complex infrastructure.</p>
+                <a href="#" class="btn nav-link" data-page="wallet">Access Your Wallet</a>
+            </div>
+        </div>
+
+        <div class="container page-container">
+            <h2 class="section-title">System Overview</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>📊 Excel-Based Ledger</h3>
+                    <p>Uses Microsoft Excel as a decentralized-like ledger container with each sheet representing a node and each row a transaction block.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🔗 Hash Chaining</h3>
+                    <p>Implements SHA256 hash chaining to create an immutable transaction history, similar to blockchain technology.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>📱 QR Verification</h3>
+                    <p>Each token or transaction is assigned a QR code for easy verification and integrity checking.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>⚡ No-Cost Solution</h3>
+                    <p>Provides a no-cost, Excel-based alternative ideal for small-scale ecosystems and educational purposes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wallet Page -->
+    <section id="wallet" class="page">
+        <div class="container page-container">
+            <h2 class="section-title">Your WKCoin Wallet</h2>
+            <div class="wallet-container">
+                <div class="wallet-card">
+                    <div class="wallet-header">
+                        <h3>WKCoin Balance</h3>
+                        <span class="balance" id="balance">125.50 WKC</span>
+                    </div>
+                    <p>Wallet Address:</p>
+                    <div class="wallet-address" id="wallet-address">WZk1A2b3C4d5E6f7G8h9I0jK1L2m3N4o5P6q</div>
+                    <p>Total Supply: 3,654 WKC</p>
+                    <div class="wallet-actions">
+                        <button class="btn" id="send-btn">Send WKC</button>
+                        <button class="btn btn-outline" id="receive-btn">Receive WKC</button>
+                        <button class="btn btn-outline" id="verify-btn">Verify Transaction</button>
+                        <button class="btn btn-outline" id="export-btn">Export to Excel</button>
+                    </div>
+                </div>
+                
+                <div class="wallet-card">
+                    <h3>Wallet Information</h3>
+                    <div style="margin-top: 1.5rem;">
+                        <p><strong>Created:</strong> October 15, 2025</p>
+                        <p><strong>Last Activity:</strong> October 20, 2025</p>
+                        <p><strong>Transactions:</strong> 12</p>
+                        <p><strong>Status:</strong> <span style="color: #4CAF50;">Active</span></p>
+                    </div>
+                    
+                    <h3 style="margin-top: 2rem;">Quick Actions</h3>
+                    <div class="wallet-actions">
+                        <button class="btn btn-outline">Backup Wallet</button>
+                        <button class="btn btn-outline">Show Private Key</button>
+                        <button class="btn btn-outline">View QR Code</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transactions Page -->
+    <section id="transactions" class="page">
+        <div class="container page-container">
+            <h2 class="section-title">Transaction History</h2>
+            <div class="transactions-container">
+                <div class="transaction-header">
+                    <h3>All Transactions</h3>
+                    <span>WKCoin Excel Ledger</span>
+                </div>
+                <div class="transaction-list" id="transaction-list">
+                    <!-- Transactions will be added here by JavaScript -->
+                </div>
+            </div>
+            
+            <div style="margin-top: 2rem; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <button class="btn btn-outline">Export All Transactions</button>
+                </div>
+                <div>
+                    <span>Showing 12 of 12 transactions</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Excel Ledger Page -->
+    <section id="ledger" class="page">
+        <div class="container page-container">
+            <h2 class="section-title">Excel Ledger</h2>
+            <div class="ledger-container">
+                <div class="ledger-header">
+                    <h3>WokzokCoin Transaction Ledger</h3>
+                    <span>Immutable Excel Record</span>
+                </div>
+                <table class="ledger-table">
+                    <thead>
+                        <tr>
+                            <th>Block ID</th>
+                            <th>Timestamp</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Amount</th>
+                            <th>Hash</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ledger-body">
+                        <!-- Ledger rows will be added here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="margin-top: 2rem; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <button class="btn">Download Excel File</button>
+                    <button class="btn btn-outline" style="margin-left: 10px;">Verify Ledger Integrity</button>
+                </div>
+                <div>
+                    <span>Block Height: 12</span>
+                </div>
+            </div>
+            
+            <div class="feature-grid" style="margin-top: 3rem;">
+                <div class="feature-item">
+                    <h3>Ledger Integrity</h3>
+                    <p>The Excel ledger uses SHA256 hash chaining to ensure data integrity. Each block references the previous block's hash.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Excel Automation</h3>
+                    <p>VBA macros automate hash calculation and block creation, making the system easy to use without technical expertise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Whitepaper Page -->
+    <section id="whitepaper" class="page">
+        <div class="container page-container">
+            <h2 class="section-title">WokzokCoin Whitepaper</h2>
+            <div class="whitepaper-content">
+                <h3>Executive Summary</h3>
+                <p>WokzokCoin (WKC) is a hybrid Excel-based digital asset system designed to emulate blockchain-like immutability, transparency, and traceability — without relying on SQL databases or external blockchain networks.</p>
+                
+                <h3>Problem Statement</h3>
+                <p>Most blockchain systems are costly and infrastructure-heavy. WokzokCoin provides a no-cost, Excel-based alternative ideal for small-scale ecosystems, education, and transparent tokenized experiments.</p>
+                
+                <h3>Objectives</h3>
+                <ul>
+                    <li>Create a tamper-evident, Excel-based ledger system for token tracking.</li>
+                    <li>Provide blockchain-like immutability through hash chaining.</li>
+                    <li>Allow transparent and verifiable token issuance without servers.</li>
+                    <li>Enable learning and experimentation with blockchain logic in Excel.</li>
+                </ul>
+                
+                <h3>Tokenomics</h3>
+                <p><strong>Token Name:</strong> WokzokCoin (WKC)</p>
+                <p><strong>Total Supply:</strong> 3,654 WKC (Fixed)</p>
+                <p><strong>Fractional Units:</strong> 0.000001 WKC</p>
+                <p><strong>Platform:</strong> Excel-based (no server/database)</p>
+                <p><strong>Issuance Authority:</strong> Admin only</p>
+                <p><strong>Transferability:</strong> Internal ledger transfers</p>
+                
+                <h3>System Architecture</h3>
+                <p>The WKC system uses an Excel workbook as a decentralized-like ledger container. Each sheet represents a node, and each row represents a transaction block. The VBA macro engine drives the blockchain-like functionality, computing SHA256 hashes and linking each block to its predecessor.</p>
+                
+                <h3>Technology Stack</h3>
+                <p>Microsoft Excel (Ledger) | VBA Macros (Automation) | SHA256 Hash Function | QR Code Generator</p>
+                
+                <h3>Roadmap</h3>
+                <ul>
+                    <li>Q4 2025 – Developer release of Excel ledger prototype.</li>
+                    <li>Q1 2026 – Introduction of web-based QR validation module.</li>
+                    <li>Q2 2026 – API integration for hybrid blockchain backup.</li>
+                    <li>Q3 2026 – Public testing and educational outreach.</li>
+                    <li>Q4 2026 – Launch of full hybrid Excel-Blockchain model.</li>
+                </ul>
+                
+                <h3>Legal Disclaimer</h3>
+                <p>WokzokCoin (WKC) is a conceptual and educational system demonstrating blockchain mechanisms within Excel. It is not intended as an investment or financial instrument. All usage is at the user's discretion and risk.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About WokzokCoin</h3>
+                    <p>WokzokCoin provides a transparent, Excel-based token system for education and small-scale ecosystems.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#" class="nav-link" data-page="home">Home</a></li>
+                        <li><a href="#" class="nav-link" data-page="wallet">Wallet</a></li>
+                        <li><a href="#" class="nav-link" data-page="transactions">Transactions</a></li>
+                        <li><a href="#" class="nav-link" data-page="ledger">Excel Ledger</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <p>WokzokCoin is a conceptual and educational system demonstrating blockchain mechanisms within Excel. It is not an investment instrument.</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 WokzokCoin Project. Developed by Kuldeep Sah. Contact: admin@wokzok.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="send-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Send WKCoin</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="send-form">
+                <div class="form-group">
+                    <label for="recipient">Recipient Address</label>
+                    <input type="text" id="recipient" class="form-control" placeholder="Enter wallet address">
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount (WKC)</label>
+                    <input type="number" id="amount" class="form-control" placeholder="0.00" step="0.000001" min="0.000001">
+                </div>
+                <button type="submit" class="btn">Send Transaction</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="receive-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Receive WKCoin</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <p>Share your wallet address to receive WKCoin:</p>
+            <div class="wallet-address" style="margin: 1.5rem 0;">WZk1A2b3C4d5E6f7G8h9I0jK1L2m3N4o5P6q</div>
+            <p>Or scan this QR code:</p>
+            <div style="background: var(--primary); padding: 20px; display: inline-block; margin: 1rem 0; border: 1px solid var(--border);">
+                <div style="width: 200px; height: 200px; background: var(--accent); display: flex; justify-content: center; align-items: center; color: var(--text-light);">
+                    QR Code
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="verify-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Verify Transaction</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <p>Verify a transaction using its hash or QR code:</p>
+            <div class="form-group">
+                <label for="transaction-hash">Transaction Hash</label>
+                <input type="text" id="transaction-hash" class="form-control" placeholder="Enter transaction hash">
+            </div>
+            <button class="btn" id="verify-hash-btn">Verify Hash</button>
+            <div style="text-align: center; margin: 1.5rem 0;">
+                <p>-- OR --</p>
+            </div>
+            <div style="text-align: center;">
+                <button class="btn btn-outline">Scan QR Code</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
